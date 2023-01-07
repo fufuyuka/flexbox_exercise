@@ -9,6 +9,7 @@ header {
   width: 100%;
   padding: 30px 20px;
   display: flex;
+  justify-content: flex-end;
 }
 
 .header-box {
@@ -18,34 +19,40 @@ header {
   margin: 0 10px;
 }
 
+header > :first-child {
+  margin-right: auto;
+}
+
 main {
-  width: 1000px;
+  width: 100%;
   background-color: #d6d6d6;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.main-left-item {
+.main-box {
   background-color: #d6f7a1;
-  width: 300px;
-  height: 500px; /*確認用*/
-
+  width: 1000px;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .main-item {
   background-color: #0d8511;
   max-width: 700px;
+  flex-grow: 1;
   padding: 20px;
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .main-item > div {
   background-color: #fcff4d;
-  width: 200px;
+  flex-basis: 200px;
   height: 130px;
   margin: 10px;
-
 }
 
 footer {
@@ -53,11 +60,14 @@ footer {
   width: 100%;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-box {
   background-color: #58c6f5;
-  width: 600px;
+  max-width: 600px;
+  flex-basis: 45%;
   height: 40px;
   margin: 10px;
 }
